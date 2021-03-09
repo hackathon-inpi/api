@@ -1,0 +1,10 @@
+{
+  "name": "gota-api",
+  "version": "0.0.1",
+  "description": "Gota de Vida API",
+  "main": "index.js",
+  "repository": "git@github.com:software-for-humans/gota-api.git",
+  "author": "Fábio Alvarenga <fabio99alvarenga@gmail.com>",
+  "license": "MIT",
+  "private": true
+}
