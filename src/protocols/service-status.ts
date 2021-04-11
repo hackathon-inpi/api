@@ -1,4 +1,5 @@
 export interface ServiceStatus{
     message: string,
-    sucess: boolean
+    sucess: boolean,
+    body?: any
 }

@@ -1,4 +1,4 @@
-import { Entity, PrimaryGeneratedColumn, Column, BaseEntity, JoinColumn, OneToOne } from 'typeorm';
+import { Entity, PrimaryGeneratedColumn, Column, BaseEntity, JoinColumn, ManyToOne } from 'typeorm';
 import User from '../../../../user/infra/typeorm/entities/User';
 
 @Entity()
@@ -18,8 +18,7 @@ export default class ProtocolGRU extends BaseEntity {
   @Column()
   barCode!: string;
 
-  @OneToOne(type => User)
+  @ManyToOne(type => User)
   @JoinColumn({ name: "user_id"})
-  user!: User
-  
+  user!: User 
 }
