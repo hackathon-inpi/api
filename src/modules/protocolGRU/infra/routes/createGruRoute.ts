@@ -1,7 +1,12 @@
 import { Router } from 'express';
 
-import { makeCreateGruController } from '../generator';
+import { makeCreateGruController, makeGetGruController, makeGetGruByIdController, makePayGruController } from '../generator';
 
 export const generateGruRoute = (route: Router) => {
-    return route.post('/protocolgru', makeCreateGruController);
+    route.post('/protocolgru', makeCreateGruController);
+    route.put('/protocolgru', makePayGruController);
+    route.get('/protocolgru', makeGetGruController);
+    route.get('/protocolgru/:id', makeGetGruByIdController);
+
+    return route;
 }
