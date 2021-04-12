@@ -9,19 +9,19 @@ export const getGruDB = async (id: number, getAll: boolean, user: User): Promise
             const gru = await ProtocolGRU.findOne({ id: id, user: user });
 
             if(!gru)
-                return { message: 'protocol GRU not found', sucess:  false };
+                return { message: 'protocol GRU not found', sucess: false };
     
-            return { message: 'protocol GRU found', sucess:  true, body: gru };
+            return { message: 'protocol GRU found', sucess: true, body: gru };
         }else{
             const GRUs = await ProtocolGRU.find();
 
             if(!GRUs)
-                return { message: 'protocol GRU not found', sucess:  false };
+                return { message: 'protocol GRU not found', sucess: false };
     
-            return { message: 'protocol GRU found', sucess:  true, body: GRUs };
+            return { message: 'protocol GRU found', sucess: true, body: GRUs };
         }
     }catch(err){
         console.log(err);
-        return { message: 'get GRU server error', sucess:  false };
+        return { message: 'get GRU server error', sucess: false };
     }
 }
