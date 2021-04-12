@@ -7,11 +7,20 @@ export default class User extends BaseEntity {
   id!: number;
 
   @Column()
-  firstName!: string;
+  name!: string;
 
   @Column()
-  lastName!: string;
+  email!: string;
 
   @Column()
-  age!: number;
+  senha!: string;
+
+  @Column()
+  numeroPatentes!: number;
+
+  @Column()
+  numeroMarcas!: number;
+
+  @Column()
+  numeroSoftwares!: number;
 }
