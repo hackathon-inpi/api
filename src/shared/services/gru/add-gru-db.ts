@@ -26,7 +26,6 @@ export const addGruDB = async (user: User): Promise<ServiceStatus> => {
 
         return { message: 'protocol GRU successfully added', sucess:  true, body: newGru };
     }catch(err){
-        console.log(err);
         return { message: 'add GRU server error', sucess:  false };
     }
 }

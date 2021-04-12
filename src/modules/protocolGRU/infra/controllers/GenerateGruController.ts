@@ -16,7 +16,7 @@ export class GenerateGruController implements Controller{
         
         const addGruStatus: ServiceStatus = await this.addGruDb(user.body);
         if(!addGruStatus.sucess){
-            return res.status(500).json({ msg: addGruStatus.message });
+            return res.status(409).json({ msg: addGruStatus.message });
         }
 
         return res.status(200).json({ infoGRU: addGruStatus, infoUser: user.body });
